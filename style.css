@@ -166,7 +166,7 @@ body {
 
 @media (max-width: 800px) {
     main {
-        overflow-x: hidden;
+        overflow: hidden;
     }
     
     .img-container {
