@@ -1,0 +1,310 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Manrope;
+}
+
+html {
+    font-size: 62.5%;
+
+    /* overflow: hidden; */
+}
+
+:root {
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+body {
+    background-color: var(--backgrond);
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.title {
+    color: white;
+    margin-top: 1rem;
+}
+
+.title h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: min(10vw, 7.5rem);
+    width: 100%;
+}
+
+.diferent {
+    color: rgba(0, 0, 0, 1);
+    text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    margin: 15px;
+    list-style: none;
+    text-decoration: none;
+    color: var(--text-color);
+
+    font-size: 14px;
+}
+
+.logo .image-1 {
+    margin-left: 6rem;
+}
+
+.img-container {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+
+    height: 39rem;
+
+    overflow: hidden;
+}
+
+.img-main {
+    min-width: 10rem;
+    max-width: 71rem;
+}
+
+.img-main img {
+    width: 100%;
+
+    object-fit: fill;
+
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.image-2.active {
+    display: none;
+}
+
+.phrase {
+    opacity: 0;
+    display: hidden;
+}
+
+.btn-mobile {
+    opacity: 0;
+    display: none;
+}
+
+.button button{
+    width: min(15rem, 15vw);
+
+    padding: .75rem;
+    border-radius: .5rem;
+
+    border: 1px solid var(--button);
+
+    background-color: transparent;
+    color: var(--text-color);
+    font-weight: 700;
+
+    font-size: 1.1rem;
+}
+
+.button.button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+    opacity: 0;
+}
+
+.container-blur {
+    display: none;
+
+    opacity: 0;
+}
+
+.container-desktop-blur, .container-desktop-blur-2 {
+    display: flex;
+    opacity: 1;
+    
+    width: 100%;
+    position: relative;
+}
+
+.desktop-blur {
+    position: absolute;
+
+    bottom: 1px;
+}
+
+.desktop-blur-2 {
+    position: absolute;
+
+    bottom: 0;
+    right: 0;
+}
+
+.desktop-blur img {
+    margin-bottom: -.9rem;
+}
+
+.desktop-blur-2 img {
+    margin-bottom: 2.9rem;
+}
+
+
+@media (max-width: 800px) {
+    main {
+        overflow-x: hidden;
+    }
+    
+    .img-container {
+        
+        height: 31rem;
+        overflow: visible;  
+
+    }
+
+
+    .img-main {
+        min-width: 50rem;
+        max-width: 45rem;
+
+    }      
+
+    .img-main img {
+        max-width: 80rem;
+
+        margin-top: 2.7rem;
+    }
+
+    .title {
+        margin-bottom: 1rem;
+    }
+
+    .title h1 {
+        font-size: min(12vw, 6rem);
+    }
+
+    .menu {
+        overflow: hidden;
+        opacity: 0;
+        display: none;
+    }
+
+    .menu-container {
+        justify-content: space-between;
+    }
+
+    .btn-mobile {
+        opacity: 1;
+        display: flex;
+    }
+
+    .button.button1 {
+        opacity: 0;
+        display: none;
+    }
+
+    .button.button2 {
+        display: flex;
+        opacity: 1;
+
+        margin-bottom: 10.8rem;
+    }
+
+    .button.button2 button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: min(35vw, 25rem);
+        
+        height: min(5vh, 8rem);
+        height: max(6vh, 3.2rem);
+
+        font-size: min(3.2vw, 2rem);
+
+    }
+    
+    .container-phrase{
+       display: flex;
+       align-items: center;
+       justify-content: center; 
+
+       margin-bottom: 8rem;
+    }
+
+    .content-phrase {
+        width: 80rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .phrase {
+        opacity: 1;
+    }
+    
+    .phrase p {
+        color: white;
+
+        font-size: min(6.4vw, 4.8rem);
+        text-align: center;
+    }
+
+    .logo .image-1 {
+        margin-left: 0;
+    }
+
+    .risco {
+        width: 100%;
+        margin-bottom: 8.5rem;
+    }
+
+    .risco .hr {
+        width: 100%;
+        height: .1rem;
+       
+        background-color: var(--border-menu-mobile);
+    }
+
+    .container-blur {
+        width: 100vw;
+        /* height: 100vh; */
+        position: relative;
+        
+        display: flex;
+        opacity: 1;
+
+        
+    }
+
+    .blur img {
+        width: 100%;
+
+        position: absolute;
+        bottom: 0;
+
+        overflow: hidden;
+        
+    }
+
+    .container-desktop-blur, .container-desktop-blur-2 {
+        display: none;
+
+        opacity: 0;
+    }
+}
