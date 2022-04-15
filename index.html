@@ -12,16 +12,18 @@
 </head>
 <body>
     <header>
-        <div class="menu-container">
-            <div class="logo">
-                <picture>
-                    <source media="(max-width: 800px)" srcset="./assets/logo-mobile.svg">
-                    <img class="image-1" src="./assets/logo-desktop.svg" alt="">
-                </picture>   
-            </div>
 
+        <div class="logo">
+            <picture>
+                <source media="(max-width: 800px)" srcset="./assets/logo-mobile.svg">
+                <img class="image-1" src="./assets/logo-desktop.svg" alt="">
+            </picture>   
+        </div>
+
+        <nav class="nav">
             <div class="btn-mobile">
-                <img src="./assets/menu-buguer-open.svg" alt="">
+                <img class="abrir" onclick="Menu.closeOpen()" src="./assets/menu-buguer-open.svg" alt="">
+                <img class="fechar"  onclick="Menu.closeOpen()" src="./assets/menu-buguer-close.svg" alt="">  
             </div>
 
             <ul class="menu">
@@ -29,12 +31,13 @@
                 <li><a href="">Menu</a></li>
                 <li><a href="">Recompensas</a></li>
                 <li><a href="">GiftCards</a></li>
-                <li><a href="">Lojas</a></li>
+                <li><a href="">Lojas</a></li>        
             </ul>
-
-            <div class="button button1">
-                <button>PEGAR MEU CAFÉ</button>
-            </div>
+        
+            
+        </nav>  
+        <div class="button button1">
+            <button>PEGAR MEU CAFÉ</button>
         </div>
     </header>
 
@@ -91,6 +94,7 @@
        
     </main>
 
+    <script src="./script.js"></script>
    
 </body>
 </html>

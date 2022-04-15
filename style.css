@@ -24,7 +24,7 @@ body {
     background-color: var(--backgrond);
 }
 
-.menu-container {
+header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -168,6 +168,10 @@ body {
     main {
         overflow: hidden;
     }
+
+    header {
+        justify-content: space-between;
+    }
     
     .img-container {
         
@@ -199,8 +203,19 @@ body {
 
     .menu {
         overflow: hidden;
-        opacity: 0;
+        opacity: 0; 
+        pointer-events: none;
         display: none;
+        position: absolute;
+        width: 100%;
+        top: 10rem;
+        right: 0;
+        display: block;
+        height: calc(100vh - 70px);
+        z-index: 1000; 
+        transition: .3s;
+        background-color: var(--backgrond);
+        cursor: unset;
     }
 
     .menu-container {
@@ -307,4 +322,38 @@ body {
 
         opacity: 0;
     }
+
+    .btn-mobile .fechar{
+        opacity: 0;
+        display: none;
+    }
+
+    .abrir.open {
+        opacity: 0;
+    }
+
+    .fechar.close {
+        opacity: 1;
+        display: flex;
+    }
+
+    .nav.active .menu  {
+        display: block;
+        opacity: 1;
+        pointer-events: all;
+    }   
+
+    .menu a {
+        padding: 2rem 0;
+        margin: 1rem 0rem;
+        border-bottom: .1rem solid var(--border);
+    }
+
+    .menu li a {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        padding: 1rem;
+    }
+
 }
